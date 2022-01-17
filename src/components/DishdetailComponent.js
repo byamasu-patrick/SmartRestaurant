@@ -6,7 +6,7 @@ class Dishdetail extends Component{
         super(props);
 
     }
-    renderDish(dish){
+    renderDish(dish){        
         if(dish != null){
             return (
                 <Card>
@@ -27,12 +27,10 @@ class Dishdetail extends Component{
            const comments = dish.comments;
             const commentsData = comments.map((comment) => {
                 return (
-                    <div className = "container">
-                        <li key = { comment.id }>
+                    <div className = "container" key = { comment.id }>
+                        <li>
                         <p>{ comment.comment }</p>
-                        <p> -- { comment.author }, 
-                        { 
-                            new Intl.DateTimeFormat('en-US', 
+                        <p> -- { comment.author }, { new Intl.DateTimeFormat('en-US', 
                             { year:'numeric', month: 'short', day: '2-digit' })
                             .format(new Date(Date.parse(comment.date))) }</p>
                         </li>
