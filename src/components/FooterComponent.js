@@ -27,12 +27,14 @@ function Footer(props){
                         </address>
                     </div>
                     <div className = "col-12 col-sm-4 align">
-                        <a className = "btn btn-social-icon btn-google m-1"></a>
-                        <a className = "btn btn-social-icon btn-facebook m-1"></a>
-                        <a className = "btn btn-social-icon btn-linkedin m-1"></a>
-                        <a className = "btn btn-social-icon btn-twitter m-1"></a>
-                        <a className = "btn btn-social-icon btn-google m-1"></a>
-                        <a className = "btn btn-social-icon m-1" href = "mailto: confusionrestaurant@gmail.com"></a>
+                        <a className = "btn btn-social-icon btn-google m-1"><i className="fa fa-google-plus"></i></a>
+                        <a className = "btn btn-social-icon btn-facebook m-1"><i className="fa fa-facebook"></i></a>
+                        <a className = "btn btn-social-icon btn-linkedin m-1"><i className="fa fa-linkedin"></i></a>
+                        <a className = "btn btn-social-icon btn-twitter m-1"><i className="fa fa-twitter"></i></a>
+                        <a className = "btn btn-social-icon btn-google m-1"><i className="fa fa-youtube"></i></a>
+                        <a className = "btn btn-social-icon m-1" href = "mailto: confusionrestaurant@gmail.com">
+                        <i className="fa fa-envelope-o"></i>
+                        </a>
                     </div>
                 </div>
            </div>
