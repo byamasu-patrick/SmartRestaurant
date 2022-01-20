@@ -143,7 +143,10 @@ class Contact extends Component{
                                 <FormGroup row>
                                     <Label htmlFor="lastname" md = { 2 }>Last Name</Label>
                                     <Col md={ 10 }>
-                                        <Input type="text" id="lastname" name="lastname" placeholder="Last Name"  value = { this.state.lastname }
+                                        <Input type="text" id="lastname" name="lastname" placeholder="Last Name"  
+                                        value = { this.state.lastname }
+                                        valid = { errors.lastname === '' }
+                                        invalid = { errors.lastname !== ''  }
                                         onChange={this.handleInputChange}
                                         onBlur={ this.handleBlur('lastname') }/>
                                     </Col>
@@ -152,7 +155,10 @@ class Contact extends Component{
                                 <FormGroup row>
                                     <Label htmlFor="telnum" md = { 2 }>Contact Tel.</Label>
                                     <Col md={ 10 }>
-                                        <Input type="text" id="telnum" name="telnum" placeholder="Tel. Number"  value = { this.state.telnum }
+                                        <Input type="text" id="telnum" name="telnum" placeholder="Tel. Number"  
+                                        value = { this.state.telnum }                                        
+                                        valid = { errors.telnum === '' }
+                                        invalid = { errors.telnum !== ''  }
                                         onChange={this.handleInputChange}
                                         onBlur={ this.handleBlur('telnum') }/>
                                     </Col>
@@ -161,7 +167,10 @@ class Contact extends Component{
                                 <FormGroup row>
                                     <Label htmlFor="email" md = { 2 }>Email</Label>
                                     <Col md={ 10 }>
-                                        <Input type="text" id="email" name="email" placeholder="Email"  value = { this.state.email }
+                                        <Input type="text" id="email" name="email" placeholder="Email"  
+                                        value = { this.state.email }
+                                        valid = { errors.email === '' }
+                                        invalid = { errors.email !== ''  }
                                         onChange={this.handleInputChange}
                                         onBlur={ this.handleBlur('email') }/>
                                     </Col>
@@ -188,7 +197,10 @@ class Contact extends Component{
                                 <FormGroup row>
                                     <Label htmlFor="message" md = { 2 }>Your Feedback</Label>
                                     <Col md={ 10 }>
-                                        <Input type="textarea" id="message" name="message" rows="12"  value = { this.state.message }
+                                        <Input type="textarea" id="message" name="message" rows="12"  
+                                        value = { this.state.message }                                        
+                                        valid = { errors.message === '' }
+                                        invalid = { errors.message !== ''  }
                                         onChange={this.handleInputChange}
                                         onBlur={ this.handleBlur('message') }/>
                                     </Col>
