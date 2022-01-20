@@ -34,7 +34,8 @@ class Contact extends Component{
     }
     render(){
         return (
-            <div className = "container">
+            <div>
+                <div className = "container">
                 <div className = "row">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to = "/home">Home </Link></BreadcrumbItem>
@@ -71,9 +72,11 @@ class Contact extends Component{
     
                         </div>
                     </div>
-                </div>
-                <div className = "row row-content">
-                    <div className = "col-12">
+                </div>                
+            </div>
+            <div class="">
+                <div className = "row row-content bg-light d-flex justify-content-center">
+                    <div className = "col-12 col-md-9 mb-4">
                         <h3>Send us Your Feedback</h3>
                     </div>
                     <div className="col-12 col-md-9">
@@ -139,6 +142,7 @@ class Contact extends Component{
                         </Form>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
