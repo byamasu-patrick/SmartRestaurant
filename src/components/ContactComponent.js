@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Breadcrumb, BreadcrumbItem, Button, FormGroup, Label, Col, Row } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
@@ -161,7 +161,7 @@ class Contact extends Component{
                                         </div>
                                     </Col>
                                     <Col md={{size: 3, offset: 1}}>
-                                        <Control.select model=".contactType" name="contactType" className="form-control"
+                                        <Control.select model=".contactType" name="contactType"
                                         className="form-control">
                                             <option>Tel.</option>
                                             <option>Email</option>
