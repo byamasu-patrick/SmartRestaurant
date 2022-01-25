@@ -110,25 +110,25 @@ function RenderDish({ dish }){
     }
 }
 function RenderComments({ comments, addComment, dishId }){
-    if(comments != null){
-        const commentsData = comments.map((comment) => {
-            return (
-                <div className = "container" key = { comment.id }>
-                    <li>
-                    <p>{ comment.comment }</p>
-                    <p> -- { comment.author }, { new Intl.DateTimeFormat('en-US', 
-                        { year:'numeric', month: 'short', day: '2-digit' })
-                        .format(new Date(Date.parse(comment.date))) }</p>
-                    </li>
-                </div>
-            );
-        });
-        
+    if(comments != null){ 
         return (
             <div className = "col-12 col-md-5 m-1">
                 <h4>Comments</h4>
                 <ul className='list-unstyled'>
-                    { commentsData }
+                    { 
+                        comments.map((comment) => {
+                            return (
+                                <div className = "container" key = { comment.id }>
+                                    <li>
+                                    <p>{ comment.comment }</p>
+                                    <p> -- { comment.author }, { new Intl.DateTimeFormat('en-US', 
+                                        { year:'numeric', month: 'short', day: '2-digit' })
+                                        .format(new Date(Date.parse(comment.date))) }</p>
+                                    </li>
+                                </div>
+                            );
+                        })
+                    }
                     <CommentsForm  dishId = { dishId }
                         addComment = { addComment } />
                 </ul>            
@@ -141,8 +141,6 @@ function RenderComments({ comments, addComment, dishId }){
 }
 
 const Dishdetail = (props) => {
-    const dish = props.dish;
-
     return (
         <div className = "container">
             <div className = "row">
@@ -157,7 +155,7 @@ const Dishdetail = (props) => {
             </div>
             <div className = "row">
                 <div className = "col-12 col-md-5 mb-3">
-                    { <RenderDish dish = { dish } /> }
+                    { <RenderDish dish = { props.dish } /> }
                 </div>
                 { <RenderComments comments = { props.comments } 
                     addComment = { props.addComment }

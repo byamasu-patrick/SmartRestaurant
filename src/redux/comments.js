@@ -10,7 +10,10 @@ export const Comments = (state = COMMENTS, action) => {
             //console.log("Comment length: "+ state.length);
             comment.date = new Date().toISOString();  
             // Adding a new object from the state array ... concat here is an immutable object  
+            //alert(JSON.stringify(state.concat(comment)));
+
             return state.concat(comment);
+
         default:
             return state;
     }

@@ -5,4 +5,4 @@ export const Leaders = (state = LEADERS, action) => {
         default: 
             return state;
     }
-}
+};
